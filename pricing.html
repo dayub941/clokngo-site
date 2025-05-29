@@ -9,29 +9,35 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      }
-      @keyframes fadeIn {
+    }
+
+    @keyframes fadeIn {
       from {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
       }
       to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
       }
-      }
+    }
 
     .pricing-box {
-      opacity: 0; /* start invisible */
+      opacity: 0;
       animation: fadeIn 1s ease-out forwards;
-      }
+    }
 
-  /* Optional: delay animations to stagger fade-ins */
     .pricing-box:nth-child(1) {
-    animation-delay: 0.2s;
+      animation-delay: 0.2s;
     }
     .pricing-box:nth-child(2) {
-     animation-delay: 0.4s;
+      animation-delay: 0.4s;
+    }
+    .pricing-box:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    .pricing-box:nth-child(4) {
+      animation-delay: 0.8s;
     }
 
     body {
@@ -41,7 +47,6 @@
       line-height: 1.6;
     }
 
-    /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
@@ -52,7 +57,7 @@
       padding: 10px 20px;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
+    }
 
     .nav-left {
       display: flex;
@@ -88,7 +93,6 @@
       height: auto;
     }
 
-    /* Hero section */
     .hero {
       text-align: center;
       padding: 80px 20px;
@@ -102,9 +106,9 @@
 
     .hero p {
       font-size: 1.2rem;
+      margin-top: 10px;
     }
 
-    /* Content sections */
     section {
       padding: 30px 20px;
       max-width: 1000px;
@@ -112,53 +116,51 @@
       text-align: center;
     }
 
-    section p {
-      margin-top: 15px;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: white;
-    }
     .features, .pricing {
       display: flex;
       gap: 30px;
       flex-wrap: wrap;
+      justify-content: center;
     }
+
     .feature-box, .pricing-box {
       background: #fff;
       padding: 20px;
       border-radius: 8px;
       flex: 1 1 45%;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
   </style>
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="site-name">CloknGo</a>
-      <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="nav-right">
-      <img src="clokngo.png" alt="CloknGo Logo" class="logo" />
-    </div>
-  </nav>
+  <div class="nav-left">
+    <a href="index.html" class="site-name">CloknGo</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <img src="clokngo.png" alt="CloknGo Logo" class="logo" />
+  </div>
+</nav>
 
 <section class="hero">
   <h2>Simple, Honest Pricing</h2>
- At CloknGo, we know that small businesses need dependable tools without the high costs or confusing contracts. 
- That’s why we offer straightforward pricing designed to fit any budget. Whether you’re tracking time for yourself or a growing team, 
- our affordable monthly plans give you everything you need to manage hours, generate accurate reports, and stay on top of payroll. No 
- setup fees, no hidden charges just a simple, effective timekeeping solution that grows with your business.
-</p>
+  <p>At CloknGo, we know that small businesses need dependable tools without the high costs or confusing contracts.
+  That’s why we offer straightforward pricing designed to fit any budget. Whether you’re tracking time for yourself or a growing team, 
+  our affordable monthly plans give you everything you need to manage hours, generate accurate reports, and stay on top of payroll.
+  No setup fees, no hidden charges — just a simple, effective timekeeping solution that grows with your business.</p>
 </section>
 
 <section class="pricing">
@@ -182,7 +184,7 @@
 
 <section id="feature">
   <h2 style="text-align: center;">Pricing</h2>
-  <div class="feature">
+  <div class="features">
     <div class="feature-box">
       <h3>Basic Plan</h3>
       <p><strong>$45/month</strong></p>
@@ -195,8 +197,6 @@
     </div>
   </div>
 </section>
-
-
 
 <footer>
   <p>2025 CloknGo</p>
