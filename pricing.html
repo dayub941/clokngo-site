@@ -22,24 +22,6 @@
       }
     }
 
-    .pricing-box {
-      opacity: 0;
-      animation: fadeIn 1s ease-out forwards;
-    }
-
-    .pricing-box:nth-child(1) {
-      animation-delay: 0.2s;
-    }
-    .pricing-box:nth-child(2) {
-      animation-delay: 0.4s;
-    }
-    .pricing-box:nth-child(3) {
-      animation-delay: 0.6s;
-    }
-    .pricing-box:nth-child(4) {
-      animation-delay: 0.8s;
-    }
-
     body {
       font-family: Arial, sans-serif;
       background: #f9f9f9;
@@ -47,6 +29,7 @@
       line-height: 1.6;
     }
 
+    /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
@@ -93,6 +76,7 @@
       height: auto;
     }
 
+    /* Hero section */
     .hero {
       text-align: center;
       padding: 80px 20px;
@@ -106,9 +90,11 @@
 
     .hero p {
       font-size: 1.2rem;
-      margin-top: 10px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
+    /* Content sections */
     section {
       padding: 30px 20px;
       max-width: 1000px;
@@ -116,7 +102,12 @@
       text-align: center;
     }
 
-    .features, .pricing {
+    section p {
+      margin-top: 15px;
+    }
+
+    /* Features and Pricing Cards */
+    .features, .pricing, .feature {
       display: flex;
       gap: 30px;
       flex-wrap: wrap;
@@ -128,9 +119,28 @@
       padding: 20px;
       border-radius: 8px;
       flex: 1 1 45%;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
     }
 
+    .pricing-box:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .pricing-box:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .pricing-box:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .pricing-box:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -141,66 +151,68 @@
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="nav-left">
-    <a href="index.html" class="site-name">CloknGo</a>
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-  <div class="nav-right">
-    <img src="clokngo.png" alt="CloknGo Logo" class="logo" />
-  </div>
-</nav>
-
-<section class="hero">
-  <h2>Simple, Honest Pricing</h2>
-  <p>At CloknGo, we know that small businesses need dependable tools without the high costs or confusing contracts.
-  That’s why we offer straightforward pricing designed to fit any budget. Whether you’re tracking time for yourself or a growing team, 
-  our affordable monthly plans give you everything you need to manage hours, generate accurate reports, and stay on top of payroll.
-  No setup fees, no hidden charges — just a simple, effective timekeeping solution that grows with your business.</p>
-</section>
-
-<section class="pricing">
-  <div class="pricing-box">
-    <h3>Easy to Use</h3>
-    <p>Designed for users of all tech levels. Clock in and out in seconds.</p>
-  </div>
-  <div class="pricing-box">
-    <h3>Affordable</h3>
-    <p>Pricing plans to fit even the tightest budgets. No hidden fees.</p>
-  </div>
-  <div class="pricing-box">
-    <h3>Cloud-Based</h3>
-    <p>Access your time logs from anywhere. All data is securely stored.</p>
-  </div>
-  <div class="pricing-box">
-    <h3>Custom Reports</h3>
-    <p>Generate time reports with one click to streamline payroll and operations.</p>
-  </div>
-</section>
-
-<section id="feature">
-  <h2 style="text-align: center;">Pricing</h2>
-  <div class="features">
-    <div class="feature-box">
-      <h3>Basic Plan</h3>
-      <p><strong>$45/month</strong></p>
-      <p>For small teams of up to 49 employees</p>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="site-name">CloknGo</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-    <div class="feature-box">
-      <h3>Business Plan</h3>
-      <p><strong>$90/month</strong></p>
-      <p>For growing teams and small businesses with 50 and above employees</p>
+    <div class="nav-right">
+      <img src="clokngo.png" alt="CloknGo Logo" class="logo" />
     </div>
-  </div>
-</section>
+  </nav>
 
-<footer>
-  <p>2025 CloknGo</p>
-</footer>
+  <section class="hero">
+    <h2>Simple, Honest Pricing</h2>
+    <p>
+      At CloknGo, we know that small businesses need dependable tools without the high costs or confusing contracts. 
+      That’s why we offer straightforward pricing designed to fit any budget. Whether you’re tracking time for yourself or a growing team, 
+      our affordable monthly plans give you everything you need to manage hours, generate accurate reports, and stay on top of payroll. 
+      No setup fees, no hidden charges — just a simple, effective timekeeping solution that grows with your business.
+    </p>
+  </section>
+
+  <section class="pricing">
+    <div class="pricing-box">
+      <h3>Easy to Use</h3>
+      <p>Designed for users of all tech levels. Clock in and out in seconds.</p>
+    </div>
+    <div class="pricing-box">
+      <h3>Affordable</h3>
+      <p>Pricing plans to fit even the tightest budgets. No hidden fees.</p>
+    </div>
+    <div class="pricing-box">
+      <h3>Cloud-Based</h3>
+      <p>Access your time logs from anywhere. All data is securely stored.</p>
+    </div>
+    <div class="pricing-box">
+      <h3>Custom Reports</h3>
+      <p>Generate time reports with one click to streamline payroll and operations.</p>
+    </div>
+  </section>
+
+  <section id="feature">
+    <h2 style="text-align: center;">Pricing</h2>
+    <div class="feature">
+      <div class="feature-box">
+        <h3>Basic Plan</h3>
+        <p><strong>$45/month</strong></p>
+        <p>For small teams of up to 49 employees</p>
+      </div>
+      <div class="feature-box">
+        <h3>Business Plan</h3>
+        <p><strong>$90/month</strong></p>
+        <p>For growing teams and small businesses with 50 and above employees</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 CloknGo. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
