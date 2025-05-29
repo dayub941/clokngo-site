@@ -29,7 +29,6 @@
       line-height: 1.6;
     }
 
-    /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
@@ -76,7 +75,6 @@
       height: auto;
     }
 
-    /* Hero section */
     .hero {
       text-align: center;
       padding: 80px 20px;
@@ -94,7 +92,6 @@
       margin: 0 auto;
     }
 
-    /* Content sections */
     section {
       padding: 30px 20px;
       max-width: 1000px;
@@ -106,7 +103,6 @@
       margin-top: 15px;
     }
 
-    /* Features and Pricing Cards */
     .features, .pricing, .feature {
       display: flex;
       gap: 30px;
@@ -124,23 +120,26 @@
       animation: fadeIn 1s ease-out forwards;
     }
 
+    .feature-box:nth-child(1),
     .pricing-box:nth-child(1) {
       animation-delay: 0.2s;
     }
 
+    .feature-box:nth-child(2),
     .pricing-box:nth-child(2) {
       animation-delay: 0.4s;
     }
 
+    .feature-box:nth-child(3),
     .pricing-box:nth-child(3) {
       animation-delay: 0.6s;
     }
 
+    .feature-box:nth-child(4),
     .pricing-box:nth-child(4) {
       animation-delay: 0.8s;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -175,22 +174,25 @@
     </p>
   </section>
 
-  <section class="pricing">
-    <div class="pricing-box">
-      <h3>Easy to Use</h3>
-      <p>Designed for users of all tech levels. Clock in and out in seconds.</p>
-    </div>
-    <div class="pricing-box">
-      <h3>Affordable</h3>
-      <p>Pricing plans to fit even the tightest budgets. No hidden fees.</p>
-    </div>
-    <div class="pricing-box">
-      <h3>Cloud-Based</h3>
-      <p>Access your time logs from anywhere. All data is securely stored.</p>
-    </div>
-    <div class="pricing-box">
-      <h3>Custom Reports</h3>
-      <p>Generate time reports with one click to streamline payroll and operations.</p>
+  <section>
+    <h2 style="text-align:center;">Key Features</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>Clock In/Out</h3>
+        <p>Employees can easily log their time from any device.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Mobile Access</h3>
+        <p>Track time on the go with our mobile-friendly system.</p>
+      </div>
+      <div class="feature-box">
+        <h3>PTO Tracking</h3>
+        <p>Track vacation, sick days, and more with built-in tools.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Manager Approvals</h3>
+        <p>Supervisors can review and approve employee timesheets quickly.</p>
+      </div>
     </div>
   </section>
 
@@ -205,7 +207,7 @@
       <div class="feature-box">
         <h3>Business Plan</h3>
         <p><strong>$90/month</strong></p>
-        <p>For growing teams and small businesses with 50 and above employees</p>
+        <p>For growing teams and small businesses with 50+ employees</p>
       </div>
     </div>
   </section>
